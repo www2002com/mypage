@@ -14,6 +14,12 @@
 
     <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
         .mytitle {
             background-color: green;
             color: white;
@@ -38,6 +44,7 @@
 
             border: 1px solid white;
             color: white;
+
             border-radius: 50px;
 
             margin-top: 20px;
@@ -57,6 +64,7 @@
         }
 
         .mypost {
+            
 
             width: 500px;
             margin: 20px auto 20px auto;
@@ -64,7 +72,6 @@
 
             box-shadow: 0px 0px 3px 0px gray;
         }
-
         .mybtn {
             display: flex;
             flex-direction: row;
@@ -76,6 +83,26 @@
 
         .mybtn > button {
             margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .mycards {
+                width: 100%;
+                padding: 0 15px; /* 화면이 좁아질 때 패딩 추가 */
+            }
+        
+            .mypost {
+                width: 100%; /* 화면이 좁아질 때 전체 너비 사용 */
+                margin: 20px 15px; /* 좌우 여백 조정 */
+            }
+        
+            .mytitle {
+                height: 200px; /* 작은 화면에서 높이 조정 */
+            }
+        
+            .mytitle>button {
+                width: 200px; /* 버튼 크기 조정 */
+            }
         }
     </style>
 </head>
@@ -90,20 +117,9 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화URL</label>
         </div>
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">별점</label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option selected>-- 선택하기 --</option>
-              <option value="1">⭐</option>
-              <option value="2">⭐⭐</option>
-              <option value="3">⭐⭐⭐</option>
-              <option value="4">⭐⭐⭐⭐</option>
-              <option value="5">⭐⭐⭐⭐⭐</option>
-            </select>
-          </div>
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">코멘드</label>
+            <label for="floatingTextarea">코멘트</label>
         </div>
         <div class="mybtn">
             <button type="button" class="btn btn-dark">기록하기</button>
@@ -160,6 +176,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </body>
 
 </html>
